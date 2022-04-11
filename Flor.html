@@ -1,0 +1,21 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    pincel.fillStyle = ' lightgray' ;
+    pincel.fillRect(0,0, 600, 400 );
+
+    function desenhaBola(x, y, cor){
+
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.arc(x, y, 20, 0, 2 * 3.14);
+                pincel.fill();
+    }
+
+    desenhaBola(300, 200, 'red');
+    desenhaBola(300,160, 'yellow');
+    desenhaBola(260, 200, 'orange');
+    desenhaBola(300, 240, 'blue');
+    desenhaBola(340, 200, 'black');
+</script>
